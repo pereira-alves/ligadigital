@@ -1,0 +1,10 @@
+Como eu trocaria uma lâmpada !
+
+1 - Verificar se a lâmpada está queimada pelo interruptor.
+2 - Pegar uma escada.
+3 - subir na escada.
+4 - Remover a lâmpada queimada.
+5 - colocar a lâmpada nova.
+6 - Descer da escada.
+7 - testar a nova lâmpada.
+8 - Guardar a escada.
