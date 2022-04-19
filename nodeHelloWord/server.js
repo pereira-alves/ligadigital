@@ -19,8 +19,14 @@ const server = http.createServer((req, res) => {
         res.end(`Hello ${parametrosConsulta.nome} ${parametrosConsulta.sobrenome}`);
         return;
     }
+
+    res.statusCode = 404;
+    res.setHeader('Content-Type', 'text/plain');
+    res.end(`Pagina nao encontrada ${req.url}`)
     
 });
+
+
 
 server.listen(port, hostnane, () => {
     console.log('Server running at http://${hostname}:${port}/');
