@@ -28,9 +28,14 @@ class Carro {
     this.ligado = false;
   }
 
-  acelerar(){
-    console.log("Acelera Airton...");
-    this.velocidade+=10;
+  acelerar() {
+    if(this.ligado) {
+      console.log("Acelera Airton...");
+      this.velocidade+=10;
+    }
+    else{
+      console.log("ligue o carro ...");
+    }
   }
 
   frear() {

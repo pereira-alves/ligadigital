@@ -4,11 +4,22 @@ const hostnane = '127.0.0.1';
 const port = 3000;
 
 const server = http.createServer((req, res) => {
-    const parametrosConsulta = url.parse(req.url, true)
+    const urlAnalise = url.parse(req.url, true);
+    const parametrosConsulta = urlAnalise.query;
 
-    res.statusCode = 200;
-    res.setHeader('Content-Type', 'text/plain')
-    res.end('Hello Anderson')
+    console.log(req.url);
+    if (req.url.startsWith('/bye')){
+        res.statusCode = 200;
+        res.setHeader('Content-Type', 'text/plain')
+        res.end('Tchau')
+        return;
+    } else if (req.url.startsWith('/hello')) {
+        res.statusCode = 200;
+        res.setHeader('Content-Type', 'text/plain')
+        res.end(`Hello ${parametrosConsulta.nome} ${parametrosConsulta.sobrenome}`);
+        return;
+    }
+    
 });
 
 server.listen(port, hostnane, () => {

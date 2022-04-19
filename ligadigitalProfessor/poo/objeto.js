@@ -7,7 +7,7 @@ let carroDoTiago = {
   velocidade: 0,
   ligado: false,
 
-  // ações
+  // ações  
   ligar : function() {
     console.log("Dando partida no carro...");
     this.ligado = true;
