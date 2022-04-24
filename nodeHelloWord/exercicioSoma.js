@@ -14,6 +14,7 @@ app.get(`/soma`, (requisicao, resposta) => {
 
 });
 
+
 app.get('/bye' , (requisicao, resposta) =>{
     resposta.send(`Tchau`)
 })
