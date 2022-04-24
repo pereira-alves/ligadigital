@@ -28,6 +28,9 @@ AppModule = __decorate([
                 database: process.env.DB_DATABASE,
                 entities: [__dirname + '/**/*.entity{.ts,.js}'],
                 synchronize: (process.env.DB_SYNCHRONIZE === 'true'),
+                ssl: {
+                    rejectUnauthorized: false
+                }
             }),
             item_module_1.ItemModule,
         ],
