@@ -10,7 +10,7 @@ export default function Inicio(){
     const history = useHistory()
 
     async function listarProdutos(event){
-        event.preventDefaut();
+        event.preventDefault();
         history.push('/produtos')
     }
 
@@ -20,7 +20,7 @@ export default function Inicio(){
                 <img src={logo} alt='logo' className='center'></img>
                 <br/>
 
-                <Button onClick={listarProdutos} className='center'>Ver produtos</Button>
+                <Button type='defaut' className='center' onClick={listarProdutos}>Ver produtos</Button>
 
             </section>
         </div>

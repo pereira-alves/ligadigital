@@ -19,7 +19,9 @@ import { ItemModule } from './item/item.module';
       synchronize: (process.env.DB_SYNCHRONIZE === 'true'),
       ssl: {
         rejectUnauthorized: false
-      }
+      },
+      logger:"advanced-console",
+      logging:true
     }),
     ItemModule,
   ],

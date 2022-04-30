@@ -6,6 +6,7 @@ import { AppModule } from './app.module';
 async function bootstrap() {
   const app = await NestFactory.create(AppModule);
   app.useGlobalPipes(new ValidationPipe());
+  app.enableCors() //Libera a comunicação entre portas 
 
 const config = new DocumentBuilder()
   .setTitle('Shopping list API')
